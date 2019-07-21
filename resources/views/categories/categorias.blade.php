@@ -2,16 +2,10 @@
 
 @section('content')
 <div class="container">
-<a class="navbar-brand" href="{{ url('/products') }}">
-                   Produtos
-                </a>
-                <a class="navbar-brand" href="{{ url('/categories') }}">
-                   Categoria
-                </a>
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Dashboard</div>
+                <div class="card-header">Cadastro de Categorias</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -19,8 +13,16 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
-                    Você está logado !
+                    <form>
+  <div class="form-group">
+    <label for="nome">Nome</label>
+    <input type="text" class="form-control" id="nome" aria-describedby="emailHelp" placeholder="Insira uma nova categoria">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+  
+ 
+  <button type="submit" class="btn btn-primary">Cadastrar Categoria</button>
+</form>
                 </div>
             </div>
         </div>
